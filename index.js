@@ -14,7 +14,7 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Credentials", true);
     next();
 })
-app.get('api/',async(req,res)=>{
+app.get('api',async(req,res)=>{
     try{
         var result = await movieInfo.find()
         res.json(result)
